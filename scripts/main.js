@@ -20,7 +20,7 @@ function updateImg(deg){
     $('#look').css('background-image', "url('e.jpg')");
   }else if (deg>-112 && deg<-67){
     //n
-    $('#look').css('background-image', "url('n.jpg')");
+    $('#look').css('background-image', "url('n.png')");
   }else if (deg>-158 && deg<-112){
     //nw
     $('#look').css('background-image', "url('nw.jpg')");
