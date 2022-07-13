@@ -29,6 +29,8 @@ body{
   position: relative;
   top: 25%;
   left: 3%;
+  opacity: 0.92;
+  filter: grayscale(90%);
 }
 
 #penopticane {
@@ -38,4 +40,14 @@ body{
   background-size:contain;
   background-repeat: no-repeat;
   margin: auto;
+}
+
+.penopticaneCon p{
+  text-align: center;
+  margin: auto;
+  font-size: 32px;
+  font-family: sans-serif;
+  width: 280px;
+  background-color: #f6f5f5;
+  color: #333;
 }
