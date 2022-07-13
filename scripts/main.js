@@ -12,7 +12,20 @@ function playMusic(){
 
 //DOGS THAT LOOK CODE
 function updateImg(deg){
-  if (deg>-67 && deg<-22){
+  loc = "scripts/";
+  files = ["e", "ne", "n", "nw", "w", "sw", "s", "se"];
+
+  if (deg<0){
+    deg = deg*(-1);
+  }else{
+    deg = 180+(180-deg);
+  }
+
+  i = Math.round(deg / (360/files.length));
+
+  $('#look').css('background-image', "url(''"+loc+files[i]".jpg'')");
+
+  /*if (deg>-67 && deg<-22){
     //ne
     $('#look').css('background-image', "url('ne.jpg')");
   }else if ((deg>-22 && deg<0)|| (deg>0 && deg<22)){
@@ -36,7 +49,7 @@ function updateImg(deg){
   }else if (deg>22 && deg<68){
     //ne
     $('#look').css('background-image', "url('se.jpg')");
-  }
+  }*/
 }
 
 function run(){
