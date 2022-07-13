@@ -12,7 +12,7 @@ function playMusic(){
 
 //DOGS THAT LOOK CODE
 function updateImg(deg){
-  loc = "scripts/";
+  loc = "images/dogs/";
   files = ["e", "ne", "n", "nw", "w", "sw", "s", "se"];
 
   if (deg<0){
@@ -21,35 +21,9 @@ function updateImg(deg){
     deg = 180+(180-deg);
   }
 
-  i = Math.round(deg / (360/files.length));
+  i = Math.round(deg / (360/files.length)) % files.length;
 
-  $('#look').css('background-image', "url(''"+loc+files[i]".jpg'')");
-
-  /*if (deg>-67 && deg<-22){
-    //ne
-    $('#look').css('background-image', "url('ne.jpg')");
-  }else if ((deg>-22 && deg<0)|| (deg>0 && deg<22)){
-    //e
-    $('#look').css('background-image', "url('e.jpg')");
-  }else if (deg>-112 && deg<-67){
-    //n
-    $('#look').css('background-image', "url('n.png')");
-  }else if (deg>-158 && deg<-112){
-    //nw
-    $('#look').css('background-image', "url('nw.jpg')");
-  }else if ((deg<-158 && deg > -180) || (deg>158 && deg<180)){
-    //w
-    $('#look').css('background-image', "url('w.jpg')");
-  }else if (deg>136 && deg<158){
-    //sw
-    $('#look').css('background-image', "url('sw.jpg')");
-  }else if (deg>68 && deg<136){
-    //s
-    $('#look').css('background-image', "url('s.jpg')");
-  }else if (deg>22 && deg<68){
-    //ne
-    $('#look').css('background-image', "url('se.jpg')");
-  }*/
+  $('#look').css('background-image', "url('"+loc+files[i]+".jpg')");
 }
 
 function run(){
